@@ -1,5 +1,12 @@
 package me.roy.collect.app.libraries;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+
+import me.roy.collect.app.R;
 import me.roy.collect.common.base.BaseFragment;
 
 /**
@@ -8,6 +15,42 @@ import me.roy.collect.common.base.BaseFragment;
  */
 public class TypeFragment extends BaseFragment {
 
+    private ListView listView;
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.libraries_fragment_type, null);
+    }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        findViewById();
+        initData();
+        initView();
+
+        action();
+    }
+
+    private void findViewById(){
+        listView = (ListView) getView().findViewById(R.id.list_view);
+    }
+
+    private void initData(){
+
+    }
+
+    private void initView(){
+
+    }
+
+    private void action(){
+
+    }
 }

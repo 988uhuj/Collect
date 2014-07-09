@@ -5,13 +5,37 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import me.roy.collect.app.libraries.TypeFragment;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    private TypeFragment typeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initData();
+
+        action();
+    }
+
+    private void initData(){
+        typeFragment = new TypeFragment();
+    }
+
+    private void action(){
+        replaceContentFragment();
+    }
+
+
+    private void replaceContentFragment(){
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.content, typeFragment)
+                .commit();
     }
 
 
