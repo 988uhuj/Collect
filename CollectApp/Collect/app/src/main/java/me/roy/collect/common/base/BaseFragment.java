@@ -7,7 +7,8 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.wisorg.wisedu.activity.calendar.util.Constants;
+import me.roy.collect.util.Constants;
+
 
 public class BaseFragment extends Fragment{
 

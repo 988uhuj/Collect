@@ -3,13 +3,13 @@ package me.roy.collect.common.base;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 
 /**
  * Created by chenupt@gmail.com on 2014/5/18.
  * Description : TODO
  */
-public abstract class BaseModelAndView extends LinearLayout {
+public abstract class BaseModelAndView extends FrameLayout {
 
 	public static final String TAG = "MonthViewAdapter";
 	

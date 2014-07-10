@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import me.roy.collect.app.R;
+import me.roy.collect.app.libraries.adapter.TypeAdapter;
+import me.roy.collect.app.libraries.service.TypeService;
 import me.roy.collect.common.base.BaseFragment;
 
 /**
@@ -16,6 +18,7 @@ import me.roy.collect.common.base.BaseFragment;
 public class TypeFragment extends BaseFragment {
 
     private ListView listView;
+    private TypeAdapter typeAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,11 +46,12 @@ public class TypeFragment extends BaseFragment {
     }
 
     private void initData(){
-
+        typeAdapter = new TypeAdapter(getActivity());
+        typeAdapter.addList(TypeService.getInstance().addTest());
     }
 
     private void initView(){
-
+        listView.setAdapter(typeAdapter);
     }
 
     private void action(){

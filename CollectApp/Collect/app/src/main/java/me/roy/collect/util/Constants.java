@@ -8,14 +8,8 @@ public class Constants {
 		public final static int DELETE = 1;
 	}
 	
-	public static class DEF_MONTH_VIEW_LIST_TYPE{
-		public final static int CALENDER = 1;
-		public final static int HEAD = 2;
-		public final static int ITEMS = 3;
-		public final static int ADD_NEW = 4;
-		public final static int DESCRIPTION = 5;
-		public final static int TAG = 6;
-		public final static int LOADING = 7;
+	public static class DEF_LIBS_LIST_TYPE{
+		public final static int SIMPLE = 1;
 	}
 	
 	public static class DEF_WEEK_VIEW_LIST_TYPE{
