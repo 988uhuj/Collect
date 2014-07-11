@@ -1,4 +1,4 @@
-package me.roy.collect.app.libraries.adapter;
+package me.roy.collect.app.libs.manage.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import java.util.Map;
 
-import me.roy.collect.app.libraries.modelandview.ModelAndViewFactory;
+import me.roy.collect.app.libs.manage.modelandview.ModelAndViewFactory;
 import me.roy.collect.common.base.BaseListAdapter;
 import me.roy.collect.common.base.BaseModelAndView;
 

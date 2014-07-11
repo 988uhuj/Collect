@@ -1,4 +1,4 @@
-package me.roy.collect.app.libraries;
+package me.roy.collect.app.libs.manage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import me.roy.collect.app.R;
-import me.roy.collect.app.libraries.adapter.TypeAdapter;
-import me.roy.collect.app.libraries.service.TypeService;
+import me.roy.collect.app.libs.manage.adapter.TypeAdapter;
+import me.roy.collect.app.libs.manage.service.TypeService;
 import me.roy.collect.common.base.BaseFragment;
 
 /**
@@ -22,7 +22,7 @@ public class TypeFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.libraries_fragment_type, null);
+        return inflater.inflate(R.layout.app_libraries_fragment_type, null);
     }
 
     @Override

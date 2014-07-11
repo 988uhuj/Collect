@@ -1,11 +1,11 @@
 package me.roy.collect.app;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import me.roy.collect.app.libraries.TypeFragment;
+import me.roy.collect.app.libs.manage.TypeFragment;
 
 
 public class MainActivity extends ActionBarActivity {

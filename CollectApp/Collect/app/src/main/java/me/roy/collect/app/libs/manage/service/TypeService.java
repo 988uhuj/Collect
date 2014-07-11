@@ -1,4 +1,4 @@
-package me.roy.collect.app.libraries.service;
+package me.roy.collect.app.libs.manage.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;

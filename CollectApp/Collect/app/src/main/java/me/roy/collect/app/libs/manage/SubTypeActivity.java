@@ -1,4 +1,4 @@
-package me.roy.collect.app.libraries;
+package me.roy.collect.app.libs.manage;
 
 import me.roy.collect.common.base.BaseActivity;
 

@@ -1,4 +1,4 @@
-package me.roy.collect.app.libraries.modelandview;
+package me.roy.collect.app.libs.manage.modelandview;
 
 import android.content.Context;
 
