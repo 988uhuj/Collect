@@ -2,7 +2,7 @@ package me.roy.collect.entry;
 
 import android.os.Bundle;
 
-import me.roy.collect.app.libs.manage.SubTypeActivity;
+import me.roy.collect.app.splash.SplashActivity;
 import me.roy.collect.common.base.BaseActivity;
 import me.roy.collect.util.LauncherHelper;
 
@@ -16,6 +16,7 @@ public class IndexActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        LauncherHelper.toActivity(this, SubTypeActivity.class);
+        LauncherHelper.toActivity(this, SplashActivity.class);
+        finish();
     }
 }

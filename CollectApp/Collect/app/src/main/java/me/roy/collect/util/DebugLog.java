@@ -2,7 +2,8 @@ package me.roy.collect.util;
 
 import android.util.Log;
 
-import me.roy.collect.app.BuildConfig;
+import me.roy.collect.BuildConfig;
+
 
 /**
  * Created by chenupt@gmail.com on 2014/7/9.

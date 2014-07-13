@@ -15,4 +15,11 @@ public class LauncherHelper {
         context.startActivity(intent);
     }
 
+    public static void toActivity(Context context, Class<?> c, String key, int data){
+        Intent intent = new Intent();
+        intent.setClass(context, c);
+        intent.putExtra(key, data);
+        context.startActivity(intent);
+    }
+
 }

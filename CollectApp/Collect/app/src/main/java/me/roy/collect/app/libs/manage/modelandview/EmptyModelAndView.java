@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 
 import java.util.Map;
 
-import me.roy.collect.app.R;
+import me.roy.collect.R;
 import me.roy.collect.common.base.BaseModelAndView;
 
 

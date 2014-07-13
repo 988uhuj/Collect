@@ -11,6 +11,11 @@ public class Constants {
 	public static class DEF_LIBS_LIST_TYPE{
 		public final static int SIMPLE = 1;
 	}
+
+    public static class DEF_LIB_TYPE{
+        public final static int TEXTVIEW = 1;
+        public final static int LISTVIEW = 2;
+    }
 	
 	public static class DEF_WEEK_VIEW_LIST_TYPE{
 		public final static int ITEMS = 1;

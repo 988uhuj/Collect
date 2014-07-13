@@ -6,10 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import me.roy.collect.app.R;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import me.roy.collect.R;
+import me.roy.collect.app.entity.LibType;
 import me.roy.collect.app.libs.manage.adapter.TypeAdapter;
-import me.roy.collect.app.libs.manage.service.TypeService;
 import me.roy.collect.common.base.BaseFragment;
+import me.roy.collect.util.Constants;
 
 /**
  * Created by chenupt@gmail.com on 2014/7/7.
@@ -19,6 +24,8 @@ public class TypeFragment extends BaseFragment {
 
     private ListView listView;
     private TypeAdapter typeAdapter;
+
+    private int type;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,7 +54,7 @@ public class TypeFragment extends BaseFragment {
 
     private void initData(){
         typeAdapter = new TypeAdapter(getActivity());
-        typeAdapter.addList(TypeService.getInstance().addTest());
+//        typeAdapter.addList(TypeService.getInstance().addTest());
     }
 
     private void initView(){
@@ -55,6 +62,15 @@ public class TypeFragment extends BaseFragment {
     }
 
     private void action(){
+        List<LibType> list = LibType.listAll(LibType.class);
 
+        for(LibType libType : list){
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("type", Constants.DEF_LIBS_LIST_TYPE.SIMPLE);
+            map.put("value", libType);
+            typeAdapter.addItem(map);
+        }
+
+        typeAdapter.notifyDataSetChanged();
     }
 }

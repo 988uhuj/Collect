@@ -2,12 +2,16 @@ package me.roy.collect.app.libs.manage.modelandview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 
 import java.util.Map;
 
-import me.roy.collect.app.R;
+import me.roy.collect.R;
+import me.roy.collect.app.entity.LibType;
+import me.roy.collect.app.libs.manage.SubTypeActivity;
 import me.roy.collect.common.base.BaseModelAndView;
 import me.roy.collect.util.DebugLog;
+import me.roy.collect.util.LauncherHelper;
 
 
 /**
@@ -16,7 +20,9 @@ import me.roy.collect.util.DebugLog;
  */
 public class SimpleModelAndView extends BaseModelAndView {
 
+    private View container;
 
+    private LibType libType;
 
 	public SimpleModelAndView(Context context) {
 		super(context);
@@ -27,7 +33,13 @@ public class SimpleModelAndView extends BaseModelAndView {
 	protected void onFinishInflate() {
 		super.onFinishInflate();
 		LayoutInflater.from(getContext()).inflate(R.layout.app_libraries_item_view_simple, this);
-		
+		container = findViewById(R.id.container);
+        container.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LauncherHelper.toActivity(getContext(), SubTypeActivity.class, "type", libType.getType());
+            }
+        });
 	}
 
 	@Override
@@ -35,6 +47,7 @@ public class SimpleModelAndView extends BaseModelAndView {
 		Map<String, Object> map = (Map<String, Object>) model;
 
         DebugLog.d("map:" + map);
+        libType = (LibType) map.get("value");
 	}
 
 }

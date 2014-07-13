@@ -2,7 +2,7 @@ package me.roy.collect.common.module.about;
 
 import android.os.Bundle;
 
-import me.roy.collect.app.R;
+import me.roy.collect.R;
 import me.roy.collect.common.base.BaseActivity;
 
 /**

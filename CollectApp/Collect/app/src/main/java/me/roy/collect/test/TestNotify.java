@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 
-import me.roy.collect.app.R;
+import me.roy.collect.R;
 import me.roy.collect.util.DebugLog;
 
 /**

@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import me.roy.collect.R;
 import me.roy.collect.app.libs.manage.TypeFragment;
 
 
@@ -20,6 +21,7 @@ public class MainActivity extends ActionBarActivity {
         initData();
 
         action();
+
     }
 
     private void initData(){
