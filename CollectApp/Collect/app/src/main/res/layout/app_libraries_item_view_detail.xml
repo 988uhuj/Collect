@@ -14,27 +14,41 @@
     <TextView
         android:id="@+id/title"
         android:text="ddd"
+        android:layout_marginBottom="12dp"
+        android:drawableLeft="@drawable/ic_action_labels"
         style="@android:style/TextAppearance.Large"
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/author"
         android:text="ddd"
-        style="@android:style/TextAppearance.Large"
+        android:drawableLeft="@drawable/ic_action_person"
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <TextView
+    <me.roy.collect.common.view.ScrollForeverTextView
         android:id="@+id/url"
         android:text="ddd"
-        style="@android:style/TextAppearance.Large"
+        android:drawableLeft="@drawable/ic_action_web_site"
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:autoLink="web"
         android:layout_height="wrap_content" />
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/bg_gray" />
     <TextView
         android:id="@+id/description"
         android:text="ddd"
-        android:textColor="@color/txt_gray"
-        style="@android:style/TextAppearance.Small"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_action_paste"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -35,7 +35,7 @@ public class SubTypeModelAndView extends BaseModelAndView {
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
-		LayoutInflater.from(getContext()).inflate(R.layout.app_libraries_item_view_simple, this);
+		LayoutInflater.from(getContext()).inflate(R.layout.app_libraries_item_view_sub_type, this);
         titleTextView = (TextView) findViewById(R.id.title);
         descriptionTextView = (TextView) findViewById(R.id.description);
 		container = findViewById(R.id.container);

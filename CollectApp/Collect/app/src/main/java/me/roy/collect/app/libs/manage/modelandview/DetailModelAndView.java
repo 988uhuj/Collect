@@ -23,6 +23,8 @@ public class DetailModelAndView extends BaseModelAndView {
 
     private TextView titleTextView;
     private TextView descriptionTextView;
+    private TextView authorTextView;
+    private TextView urlTextView;
     private LibInfo libInfo;
 
 	public DetailModelAndView(Context context) {
@@ -36,6 +38,8 @@ public class DetailModelAndView extends BaseModelAndView {
 		LayoutInflater.from(getContext()).inflate(R.layout.app_libraries_item_view_detail, this);
         titleTextView = (TextView) findViewById(R.id.title);
         descriptionTextView = (TextView) findViewById(R.id.description);
+        urlTextView = (TextView) findViewById(R.id.url);
+        authorTextView = (TextView) findViewById(R.id.author);
 		container = findViewById(R.id.container);
         container.setOnClickListener(new OnClickListener() {
             @Override
@@ -53,7 +57,8 @@ public class DetailModelAndView extends BaseModelAndView {
         libInfo = (LibInfo) map.get("value");
         titleTextView.setText(libInfo.getName());
         descriptionTextView.setText(libInfo.getDescription());
-
-	}
+        urlTextView.setText(libInfo.getUrl());
+        authorTextView.setText(libInfo.getAuthor());
+    }
 
 }
