@@ -8,26 +8,24 @@ import android.widget.TextView;
 import java.util.Map;
 
 import me.roy.collect.R;
-import me.roy.collect.app.entity.LibType;
-import me.roy.collect.app.libs.manage.SubTypeActivity;
+import me.roy.collect.app.entity.LibInfo;
 import me.roy.collect.common.base.BaseModelAndView;
 import me.roy.collect.util.DebugLog;
-import me.roy.collect.util.LauncherHelper;
 
 
 /**
  * Created by chenupt@gmail.com on 2014/5/18.
  * Description : TODO
  */
-public class SimpleModelAndView extends BaseModelAndView {
+public class DetailModelAndView extends BaseModelAndView {
 
     private View container;
 
-    private LibType libType;
     private TextView titleTextView;
     private TextView descriptionTextView;
+    private LibInfo libInfo;
 
-	public SimpleModelAndView(Context context) {
+	public DetailModelAndView(Context context) {
 		super(context);
 		onFinishInflate();
 	}
@@ -35,14 +33,14 @@ public class SimpleModelAndView extends BaseModelAndView {
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
-		LayoutInflater.from(getContext()).inflate(R.layout.app_libraries_item_view_simple, this);
+		LayoutInflater.from(getContext()).inflate(R.layout.app_libraries_item_view_detail, this);
         titleTextView = (TextView) findViewById(R.id.title);
         descriptionTextView = (TextView) findViewById(R.id.description);
 		container = findViewById(R.id.container);
         container.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                LauncherHelper.toActivity(getContext(), SubTypeActivity.class, "type", libType.getType());
+//                LauncherHelper.toActivity(getContext(), SubTypeActivity.class, "type", libInfo.getType());
             }
         });
 	}
@@ -52,9 +50,9 @@ public class SimpleModelAndView extends BaseModelAndView {
 		Map<String, Object> map = (Map<String, Object>) model;
 
         DebugLog.d("map:" + map);
-        libType = (LibType) map.get("value");
-        titleTextView.setText(libType.getTitle());
-        descriptionTextView.setText(libType.getDescription());
+        libInfo = (LibInfo) map.get("value");
+        titleTextView.setText(libInfo.getName());
+        descriptionTextView.setText(libInfo.getDescription());
 
 	}
 

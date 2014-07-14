@@ -14,6 +14,7 @@ import me.roy.collect.R;
 import me.roy.collect.app.entity.LibInfo;
 import me.roy.collect.app.libs.manage.adapter.TypeAdapter;
 import me.roy.collect.common.base.BaseFragment;
+import me.roy.collect.util.Constants;
 
 /**
  * Created by chenupt@gmail.com on 2014/7/7.
@@ -65,7 +66,7 @@ public class SubTypeFragment extends BaseFragment {
 
         for(LibInfo libInfo : list){
             Map<String, Object> map = new HashMap<String, Object>();
-            map.put("type", type);
+            map.put("type", Constants.DEF_LIBS_LIST_TYPE.SUB_TYPE_SIMPLE);
             map.put("value", libInfo);
             typeAdapter.addItem(map);
         }

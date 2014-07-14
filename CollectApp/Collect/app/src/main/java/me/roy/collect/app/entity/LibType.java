@@ -9,21 +9,15 @@ import com.orm.SugarRecord;
 public class LibType extends SugarRecord<LibType>{
 
     private int type;
+    private String title;
     private String description;
 
     public LibType() {
     }
 
-    public LibType(int type, String description) {
+    public LibType(int type, String title, String description) {
         this.type = type;
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
+        this.title = title;
         this.description = description;
     }
 
@@ -33,5 +27,21 @@ public class LibType extends SugarRecord<LibType>{
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

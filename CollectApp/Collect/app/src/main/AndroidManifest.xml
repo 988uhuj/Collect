@@ -28,6 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".app.libs.manage.SubTypeActivity" />
+        <activity android:name=".app.libs.manage.DetailActivity" />
     </application>
 
 </manifest>

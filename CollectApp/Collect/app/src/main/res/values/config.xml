@@ -2,8 +2,8 @@
 <resources>
     <bool name="DEBUG">true</bool>
 
-    <string name="db_name">collect2.db</string>
-    <string name="db_version">3</string>
+    <string name="db_name">collect3.db</string>
+    <string name="db_version">1</string>
     <string name="db_query_log">true</string>
     <string name="db_domain_package_name">me.roy.collect</string>
 </resources>

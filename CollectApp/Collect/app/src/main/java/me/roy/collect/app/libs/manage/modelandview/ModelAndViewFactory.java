@@ -19,6 +19,12 @@ public class ModelAndViewFactory {
             case Constants.DEF_LIBS_LIST_TYPE.SIMPLE:
                 modelAndView = new SimpleModelAndView(context);
                 break;
+            case Constants.DEF_LIBS_LIST_TYPE.SUB_TYPE_SIMPLE:
+                modelAndView = new SubTypeModelAndView(context);
+                break;
+            case Constants.DEF_LIBS_LIST_TYPE.SUB_TYPE_DETAIL:
+                modelAndView = new DetailModelAndView(context);
+                break;
             default:
                 break;
         }

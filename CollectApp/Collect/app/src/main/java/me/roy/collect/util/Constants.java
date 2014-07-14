@@ -10,6 +10,10 @@ public class Constants {
 	
 	public static class DEF_LIBS_LIST_TYPE{
 		public final static int SIMPLE = 1;
+		public final static int SUB_TYPE_SIMPLE = 2;
+		public final static int SUB_TYPE_DETAIL = 3;
+
+
 	}
 
     public static class DEF_LIB_TYPE{
