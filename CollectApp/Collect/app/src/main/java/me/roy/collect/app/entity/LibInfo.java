@@ -13,16 +13,18 @@ public class LibInfo extends SugarRecord<LibInfo> {
     private String description;
     private String url;
     private int type;
+    private boolean isCollect;
 
     public LibInfo() {
     }
 
-    public LibInfo(String name, String author, String description, String url, int type) {
+    public LibInfo(String name, String author, String description, String url, int type, boolean isCollect) {
         this.name = name;
         this.author = author;
         this.description = description;
         this.url = url;
         this.type = type;
+        this.isCollect = isCollect;
     }
 
     public String getName() {
@@ -63,5 +65,13 @@ public class LibInfo extends SugarRecord<LibInfo> {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public boolean isCollect() {
+        return isCollect;
+    }
+
+    public void setCollect(boolean isCollect) {
+        this.isCollect = isCollect;
     }
 }

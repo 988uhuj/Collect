@@ -1,4 +1,4 @@
-package me.roy.collect.app.libs.manage;
+package me.roy.collect.app.favorite;
 
 import android.os.Bundle;
 
@@ -9,9 +9,9 @@ import me.roy.collect.common.base.BaseActivity;
  * Created by chenupt@gmail.com on 2014/7/7.
  * Description : TODO
  */
-public class DetailActivity extends BaseActivity{
+public class FavoriteListActivity extends BaseActivity{
 
-    private DetailFragment fragment;
+    private FavoriteFragment fragment;
     private long id;
 
     @Override
@@ -26,8 +26,7 @@ public class DetailActivity extends BaseActivity{
     }
 
     private void initView(){
-        fragment = new DetailFragment();
-        fragment.setId(id);
+        fragment = new FavoriteFragment();
     }
 
     private void action(){
