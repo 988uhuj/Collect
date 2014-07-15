@@ -76,6 +76,11 @@ public class DetailFragment extends BaseFragment {
             map.put("value", libInfo);
             typeAdapter.addItem(map);
 
+        map = new HashMap<String, Object>();
+        map.put("type", Constants.DEF_LIBS_LIST_TYPE.DEMO);
+        map.put("value", libInfo);
+        typeAdapter.addItem(map);
+
         typeAdapter.notifyDataSetChanged();
     }
 

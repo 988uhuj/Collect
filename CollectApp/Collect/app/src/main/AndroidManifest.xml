@@ -29,7 +29,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".app.libs.manage.SubTypeActivity" />
-        <activity android:name=".app.libs.manage.DetailActivity" />
+        <activity android:name=".app.libs.manage.DetailActivity"
+            android:label="@string/detail" />
+        <activity android:name=".app.favorite.FavoriteListActivity" />
+        <activity android:name=".common.module.about.AboutActivity" />
     </application>
 
 </manifest>

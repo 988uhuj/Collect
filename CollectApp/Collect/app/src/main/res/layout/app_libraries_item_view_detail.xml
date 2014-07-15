@@ -30,7 +30,7 @@
     <me.roy.collect.common.view.ScrollForeverTextView
         android:id="@+id/url"
         android:text="ddd"
-        android:drawableLeft="@drawable/ic_action_web_site"
+        android:drawableLeft="@drawable/ic_action_cloud"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:singleLine="true"

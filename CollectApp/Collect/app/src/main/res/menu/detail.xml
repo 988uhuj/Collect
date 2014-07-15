@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="me.roy.collect.app.MainActivity" >
+
+    <item
+        android:id="@+id/action_collect"
+        android:icon="@drawable/ic_action_important"
+        app:showAsAction="always"
+        android:title="star"/>
+</menu>

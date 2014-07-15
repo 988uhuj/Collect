@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
 
 import me.roy.collect.util.Constants;
 
@@ -56,6 +57,8 @@ public class BaseActivity extends ActionBarActivity {
 		IntentFilter intentFilter = new IntentFilter();
 		intentFilter.addAction(Constants.CHANGE_DATA＿ACTION);
 		registerReceiver(syncDataReceiver, intentFilter);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override
@@ -71,5 +74,16 @@ public class BaseActivity extends ActionBarActivity {
 	protected interface OnSyncDataListener {
 		public void onReceive(Context context, Intent intent);
 	}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 }

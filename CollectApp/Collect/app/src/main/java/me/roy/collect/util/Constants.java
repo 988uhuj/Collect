@@ -12,9 +12,11 @@ public class Constants {
 		public final static int SIMPLE = 1;
 		public final static int SUB_TYPE_SIMPLE = 2;
 		public final static int SUB_TYPE_DETAIL = 3;
-
-
+        public final static int MENU_SIMPLE = 4;
+        public final static int MENU_HEAD = 5;
+        public final static int DEMO = 6;
 	}
+
 
     public static class DEF_LIB_TYPE{
         public final static int TEXTVIEW = 1;

@@ -43,4 +43,12 @@
 
     <color name="lineColor">#d3d3d3</color>
     <color name="bg_gray_Color">#dad9d7</color>
+
+    <color name="holo_blue">#33b5e5</color>
+    <color name="tab_color">#48c3b1</color>
+    <color name="tab_color_uncheck">#333333</color>
+
+    <color name="tab_color_1">#484848</color>
+    <color name="tab_color_2">#848484</color>
+    
 </resources>

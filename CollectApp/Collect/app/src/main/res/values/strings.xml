@@ -4,5 +4,15 @@
     <string name="app_name">Collect</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="drawer_open">HomeActivity</string>
+    <string name="drawer_close">HomeClose</string>
+
+    <string name="version">1.0</string>
+    <string name="publish_time">2014/7/15</string>
+    <string name="update">软件更新</string>
+    <string name="about">关于</string>
+    <string name="detail">详情</string>
+    <string name="collection">我的收藏</string>
+
 
 </resources>

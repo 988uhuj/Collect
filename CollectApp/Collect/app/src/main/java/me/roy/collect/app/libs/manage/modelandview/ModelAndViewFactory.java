@@ -2,6 +2,8 @@ package me.roy.collect.app.libs.manage.modelandview;
 
 import android.content.Context;
 
+import me.roy.collect.app.menu.modelandview.HeadModelAndView;
+import me.roy.collect.app.menu.modelandview.MenuModelAndView;
 import me.roy.collect.common.base.BaseModelAndView;
 import me.roy.collect.util.Constants;
 
@@ -24,6 +26,15 @@ public class ModelAndViewFactory {
                 break;
             case Constants.DEF_LIBS_LIST_TYPE.SUB_TYPE_DETAIL:
                 modelAndView = new DetailModelAndView(context);
+                break;
+            case Constants.DEF_LIBS_LIST_TYPE.MENU_SIMPLE:
+                modelAndView = new MenuModelAndView(context);
+                break;
+            case Constants.DEF_LIBS_LIST_TYPE.MENU_HEAD:
+                modelAndView = new HeadModelAndView(context);
+                break;
+            case Constants.DEF_LIBS_LIST_TYPE.DEMO:
+                modelAndView = new DemoModelAndView(context);
                 break;
             default:
                 break;
@@ -51,6 +62,13 @@ public class ModelAndViewFactory {
 //		}
 		return false;
 	}
+
+    public boolean isEnable(int position){
+        if(position == 0){
+            return false;
+        }
+        return true;
+    }
 	
 
     private static volatile ModelAndViewFactory instance = null;

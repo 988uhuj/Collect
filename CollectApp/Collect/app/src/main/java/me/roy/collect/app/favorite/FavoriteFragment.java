@@ -59,7 +59,7 @@ public class FavoriteFragment extends BaseFragment {
     }
 
     private void action(){
-        List<LibInfo> list = LibInfo.find(LibInfo.class, "isCollect = ?", String.valueOf(true));
+        List<LibInfo> list = LibInfo.find(LibInfo.class, "is_collect = ?", String.valueOf(1));
 
         for(LibInfo libInfo : list){
             Map<String, Object> map = new HashMap<String, Object>();

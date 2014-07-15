@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="menu_array">
+        <item>Library</item>
+        <item>Favorite</item>
+        <item>Weekly</item>
+        <item>Apps</item>
+        <item>About</item>
+    </array>
 </resources>

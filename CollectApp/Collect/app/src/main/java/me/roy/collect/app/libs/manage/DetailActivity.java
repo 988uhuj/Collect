@@ -41,4 +41,5 @@ public class DetailActivity extends BaseActivity{
                 .commit();
     }
 
+
 }
