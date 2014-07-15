@@ -3,5 +3,6 @@
   "author": "adnan-SM",
   "description": "Animated TextView like Timely app",
   "url":"https://github.com/adnan-SM/TimelyTextView",
-  "type":1
+  "type":1,
+  "sample":"com.daimajia.androidanimations.MyActivity"
 }

@@ -10,6 +10,7 @@ import me.roy.collect.R;
 import me.roy.collect.app.entity.LibInfo;
 import me.roy.collect.common.base.BaseModelAndView;
 import me.roy.collect.util.DebugLog;
+import me.roy.collect.util.LauncherHelper;
 
 
 /**
@@ -32,12 +33,17 @@ public class DemoModelAndView extends BaseModelAndView {
 		super.onFinishInflate();
 		LayoutInflater.from(getContext()).inflate(R.layout.app_libraries_item_view_demo, this);
 		container = findViewById(R.id.container);
-//        container.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                LauncherHelper.toActivity(getContext(), SubTypeActivity.class, "type", libInfo.getType());
-//            }
-//        });
+        container.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Class<?> c = Class.forName(libInfo.getSample());
+                    LauncherHelper.toActivity(getContext(), c);
+                } catch(ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 	}
 
 	@Override

@@ -3,5 +3,6 @@
   "author": "daimajia",
   "description": "One day, I saw an iOS library, which is a view shaker, it's very beautiful. I think Android also need one, and should be better.So, I started to collect animation effects... and in two days, this project born.",
   "url":"https://github.com/daimajia/AndroidViewAnimations",
-  "type":2
+  "type":2,
+  "sample":"com.daimajia.androidanimations.MyActivity"
 }
