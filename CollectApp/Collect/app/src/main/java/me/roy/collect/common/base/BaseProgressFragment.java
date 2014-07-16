@@ -5,10 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+
+import com.devspark.progressfragment.ProgressFragment;
 
 
-public class BaseFragment extends Fragment{
+public class BaseProgressFragment extends ProgressFragment {
 
 	
 	protected boolean isActive;

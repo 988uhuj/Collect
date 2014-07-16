@@ -1,5 +1,6 @@
 package me.roy.collect.app.libs.manage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,6 +17,7 @@ import java.util.Map;
 import me.roy.collect.R;
 import me.roy.collect.app.entity.LibInfo;
 import me.roy.collect.app.libs.manage.adapter.TypeAdapter;
+import me.roy.collect.common.base.BaseConstants;
 import me.roy.collect.common.base.BaseFragment;
 import me.roy.collect.util.Constants;
 
@@ -101,6 +103,20 @@ public class DetailFragment extends BaseFragment {
         Toast.makeText(getActivity(), "已取消保存", Toast.LENGTH_SHORT).show();
     }
 
+    private void onCollectBtnClick(MenuItem item){
+        if(libInfo.isCollect()){
+            unCollect();
+            item.setIcon(R.drawable.ic_action_not_important);
+        }else{
+            collect();
+            item.setIcon(R.drawable.ic_action_important);
+        }
+        typeAdapter.notifyDataSetChanged();
+        Intent i = new Intent();
+        i.setAction(BaseConstants.CHANGE_DATA＿ACTION);
+        getActivity().sendBroadcast(i);
+    }
+
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -117,13 +133,7 @@ public class DetailFragment extends BaseFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_collect) {
-            if(libInfo.isCollect()){
-                unCollect();
-                item.setIcon(R.drawable.ic_action_not_important);
-            }else{
-                collect();
-                item.setIcon(R.drawable.ic_action_important);
-            }
+            onCollectBtnClick(item);
             return true;
         }
         return super.onOptionsItemSelected(item);

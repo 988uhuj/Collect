@@ -48,7 +48,10 @@
     <color name="tab_color">#48c3b1</color>
     <color name="tab_color_uncheck">#333333</color>
 
-    <color name="tab_color_1">#484848</color>
-    <color name="tab_color_2">#848484</color>
-    
+    <color name="tab_color_1">#343456</color>
+    <color name="tab_color_2">#60325f</color>
+    <color name="tab_color_3">#5d395d</color>
+    <color name="tab_color_4">#511350</color>
+
+    <color name="background">#e8e8e0</color>
 </resources>

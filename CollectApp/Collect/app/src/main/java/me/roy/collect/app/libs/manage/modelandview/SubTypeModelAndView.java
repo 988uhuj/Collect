@@ -26,6 +26,7 @@ public class SubTypeModelAndView extends BaseModelAndView {
     private LibInfo libInfo;
     private TextView titleTextView;
     private TextView descriptionTextView;
+    private TextView collectTextView;
 
 	public SubTypeModelAndView(Context context) {
 		super(context);
@@ -39,6 +40,7 @@ public class SubTypeModelAndView extends BaseModelAndView {
         titleTextView = (TextView) findViewById(R.id.title);
         descriptionTextView = (TextView) findViewById(R.id.description);
 		container = findViewById(R.id.container);
+        collectTextView = (TextView) findViewById(R.id.collect_text);
         container.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +58,11 @@ public class SubTypeModelAndView extends BaseModelAndView {
         titleTextView.setText(libInfo.getName());
         descriptionTextView.setText(libInfo.getDescription());
 
+        if(libInfo.isCollect()){
+            collectTextView.setVisibility(View.VISIBLE);
+        }else{
+            collectTextView.setVisibility(View.GONE);
+        }
 	}
 
 }

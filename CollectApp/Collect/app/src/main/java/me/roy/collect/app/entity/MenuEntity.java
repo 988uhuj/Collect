@@ -9,6 +9,16 @@ public class MenuEntity {
     private String menuStr;
     private Class<?> targetClass;
 
+    public int getIcon() {
+        return icon;
+    }
+
+    public void setIcon(int icon) {
+        this.icon = icon;
+    }
+
+    private int icon;
+
     public long getId() {
         return id;
     }

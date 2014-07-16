@@ -1,5 +1,7 @@
 package me.roy.collect.app.libs.manage;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +56,13 @@ public class SubTypeFragment extends BaseFragment {
 
     private void initData(){
         typeAdapter = new TypeAdapter(getActivity());
+
+        setOnSyncDataListener(new OnSyncDataListener() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                getData();
+            }
+        });
     }
 
     private void initView(){
@@ -61,9 +70,13 @@ public class SubTypeFragment extends BaseFragment {
     }
 
     private void action(){
-//        List<LibInfo> list = LibInfo.listAll(LibInfo.class);
+       getData();
+    }
+
+    private void getData(){
         List<LibInfo> list = LibInfo.find(LibInfo.class, "type = ?", String.valueOf(type));
 
+        typeAdapter.clearList();
         for(LibInfo libInfo : list){
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("type", Constants.DEF_LIBS_LIST_TYPE.SUB_TYPE_SIMPLE);
@@ -77,4 +90,7 @@ public class SubTypeFragment extends BaseFragment {
     public void setType(int type){
         this.type = type;
     }
+
+
+
 }

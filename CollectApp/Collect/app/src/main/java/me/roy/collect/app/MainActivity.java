@@ -1,15 +1,10 @@
 package me.roy.collect.app;
 
 import android.content.res.Configuration;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.LayerDrawable;
-import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,11 +20,12 @@ import me.roy.collect.app.entity.MenuEntity;
 import me.roy.collect.app.favorite.FavoriteFragment;
 import me.roy.collect.app.libs.manage.TypeFragment;
 import me.roy.collect.app.menu.adapter.MenuAdapter;
+import me.roy.collect.common.base.BaseActivity;
 import me.roy.collect.common.module.about.AboutFragment;
 import me.roy.collect.util.Constants;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends BaseActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
@@ -41,6 +37,11 @@ public class MainActivity extends ActionBarActivity {
     private AboutFragment aboutFragment;
 
     private String[] menuArray;
+    private int[] iconArray = {R.drawable.ic_action_labels
+                    , R.drawable.ic_action_important_light
+                    , R.drawable.ic_action_email
+                    , R.drawable.ic_action_view_as_grid
+                    , R.drawable.ic_action_about_light};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,10 +106,12 @@ public class MainActivity extends ActionBarActivity {
                 if(i == 1){
                     replaceContentFragment();
                 }else if(i == 2){
-                    changeColor(0XFF565656);
+                    getSupportActionBar().setTitle(R.string.collection);
+                    changeColor(getResources().getColor(R.color.tab_color_4));
                     replaceFragment(favoriteFragment);
                 }else if(i == 5){
-                    changeColor(0XFF343434);
+                    getSupportActionBar().setTitle(R.string.about);
+                    changeColor(getResources().getColor(R.color.tab_color_3));
                     replaceFragment(aboutFragment);
                 }
             }
@@ -128,6 +131,7 @@ public class MainActivity extends ActionBarActivity {
             MenuEntity menuEntity = new MenuEntity();
             menuEntity.setMenuStr(menuArray[i]);
             menuEntity.setId(i);
+            menuEntity.setIcon(iconArray[i]);
 
             map = new HashMap<String, Object>();
             map.put("type", Constants.DEF_LIBS_LIST_TYPE.MENU_SIMPLE);
@@ -141,7 +145,8 @@ public class MainActivity extends ActionBarActivity {
 
 
     private void replaceContentFragment(){
-        changeColor(0XFF484848);
+        getSupportActionBar().setTitle(R.string.app_name);
+        changeColor(getResources().getColor(R.color.tab_color_1));
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.content, typeFragment)
@@ -179,28 +184,7 @@ public class MainActivity extends ActionBarActivity {
         drawerToggle.onConfigurationChanged(newConfig);
     }
 
-    private Drawable oldBackground = null;
 
-    private void changeColor(int newColor) {
-
-        Drawable colorDrawable = new ColorDrawable(newColor);
-        Drawable bottomDrawable = getResources().getDrawable(R.drawable.actionbar_bottom);
-        LayerDrawable ld = new LayerDrawable(new Drawable[]{colorDrawable, bottomDrawable});
-
-        if (oldBackground == null) {
-            getSupportActionBar().setBackgroundDrawable(ld);
-        } else {
-            TransitionDrawable td = new TransitionDrawable(new Drawable[]{oldBackground, ld});
-            getSupportActionBar().setBackgroundDrawable(td);
-            td.startTransition(200);
-        }
-
-        oldBackground = ld;
-
-        // http://stackoverflow.com/questions/11002691/actionbar-setbackgrounddrawable-nulling-background-from-thread-handler
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-    }
 
 
 

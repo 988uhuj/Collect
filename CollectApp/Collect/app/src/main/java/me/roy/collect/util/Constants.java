@@ -2,8 +2,6 @@ package me.roy.collect.util;
 
 public class Constants {
 	
-	public final static String CHANGE_DATA＿ACTION = "change_data_action";
-	
 	public static class DEF_CHANGE_DATA_ACTION_TYPE{
 		public final static int DELETE = 1;
 	}

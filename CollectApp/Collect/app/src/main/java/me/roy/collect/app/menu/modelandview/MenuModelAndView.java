@@ -1,6 +1,7 @@
 package me.roy.collect.app.menu.modelandview;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -51,6 +52,8 @@ public class MenuModelAndView extends BaseModelAndView {
         menuEntity = (MenuEntity) map.get("value");
         titleTextView.setText(menuEntity.getMenuStr());
 
+        Drawable drawable = getContext().getResources().getDrawable(menuEntity.getIcon());
+        titleTextView.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
 	}
 
 //    private void changeContent(){

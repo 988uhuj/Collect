@@ -1,0 +1,8 @@
+{
+  "name": "Swipeable-Cards",
+  "author": "kikoso",
+  "description": "Swipeable-cards is a native library for Android that provide a Tinder card like effect. A card can be constructed using an image and displayed with animation effects, dismiss-to-like and dismiss-to-unlike, and use different sorting mechanisms.",
+  "url":"https://github.com/kikoso/Swipeable-Cards",
+  "type":2,
+  "sample":"com.andtinder.demo.MainActivity"
+}

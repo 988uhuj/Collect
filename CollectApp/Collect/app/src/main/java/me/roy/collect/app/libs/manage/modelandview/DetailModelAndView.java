@@ -25,6 +25,7 @@ public class DetailModelAndView extends BaseModelAndView {
     private TextView descriptionTextView;
     private TextView authorTextView;
     private TextView urlTextView;
+    private TextView collectTextView;
     private LibInfo libInfo;
 
 	public DetailModelAndView(Context context) {
@@ -40,6 +41,7 @@ public class DetailModelAndView extends BaseModelAndView {
         descriptionTextView = (TextView) findViewById(R.id.description);
         urlTextView = (TextView) findViewById(R.id.url);
         authorTextView = (TextView) findViewById(R.id.author);
+        collectTextView = (TextView) findViewById(R.id.collect_text);
 		container = findViewById(R.id.container);
         container.setOnClickListener(new OnClickListener() {
             @Override
@@ -59,6 +61,12 @@ public class DetailModelAndView extends BaseModelAndView {
         descriptionTextView.setText(libInfo.getDescription());
         urlTextView.setText(libInfo.getUrl());
         authorTextView.setText(libInfo.getAuthor());
+
+        if(libInfo.isCollect()){
+            collectTextView.setVisibility(View.VISIBLE);
+        }else{
+            collectTextView.setVisibility(View.GONE);
+        }
     }
 
 }

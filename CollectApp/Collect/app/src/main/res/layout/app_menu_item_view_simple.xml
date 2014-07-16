@@ -12,7 +12,7 @@
         android:text="ddd"
         android:drawableLeft="@drawable/ic_action_labels"
         android:drawablePadding="8dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
