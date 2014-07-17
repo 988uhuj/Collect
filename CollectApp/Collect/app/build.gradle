@@ -6,7 +6,7 @@ android {
     buildToolsVersion '19.1.0'
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 9
         targetSdkVersion 20
         versionCode 1
         versionName "1.0"
@@ -39,7 +39,8 @@ dependencies {
     compile 'com.github.satyan:sugar:1.3'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'info.metadude.android:typed-preferences:1.1.0'
+    compile 'com.github.johnkil.android-progressfragment:progressfragment:1.4.+'
 
     compile project(':sample')
-
+    compile project(':umeng')
 }

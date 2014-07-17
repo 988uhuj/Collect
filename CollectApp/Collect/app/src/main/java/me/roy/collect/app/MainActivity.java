@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.umeng.update.UmengUpdateAgent;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -54,6 +56,8 @@ public class MainActivity extends BaseActivity {
         initView();
         action();
 
+        // 友盟更新
+        UmengUpdateAgent.update(this);
     }
 
     private void findViewById(){

@@ -53,5 +53,7 @@
     <color name="tab_color_3">#5d395d</color>
     <color name="tab_color_4">#511350</color>
 
-    <color name="background">#e8e8e0</color>
+    <color name="background">#f4f4f4</color>
+    <color name="text_background">#eeeeee</color>
+
 </resources>

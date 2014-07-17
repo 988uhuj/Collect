@@ -36,6 +36,9 @@ public class ModelAndViewFactory {
             case Constants.DEF_LIBS_LIST_TYPE.DEMO:
                 modelAndView = new DemoModelAndView(context);
                 break;
+            case Constants.DEF_LIBS_LIST_TYPE.COMMNET:
+                modelAndView = new CommentModelAndView(context);
+                break;
             default:
                 break;
         }

@@ -10,11 +10,15 @@
     <string name="version">1.0</string>
     <string name="publish_time">2014/7/15</string>
     <string name="update">软件更新</string>
+    <string name="feedback">反馈意见</string>
     <string name="about">关于</string>
     <string name="detail">详情</string>
     <string name="collection">我的收藏</string>
 
     <string name="empty_toast">暂无数据</string>
+    <string name="new_one">已是最新版本</string>
+    <string name="toast_collect_ok">已收藏</string>
+    <string name="toast_collect_cancel">已取消收藏</string>
 
 
 </resources>

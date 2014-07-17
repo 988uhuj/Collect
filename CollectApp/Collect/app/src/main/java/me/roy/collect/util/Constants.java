@@ -13,6 +13,7 @@ public class Constants {
         public final static int MENU_SIMPLE = 4;
         public final static int MENU_HEAD = 5;
         public final static int DEMO = 6;
+        public final static int COMMNET = 7;
 	}
 
 

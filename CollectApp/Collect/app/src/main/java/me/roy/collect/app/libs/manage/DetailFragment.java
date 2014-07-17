@@ -83,6 +83,11 @@ public class DetailFragment extends BaseFragment {
         map.put("value", libInfo);
         typeAdapter.addItem(map);
 
+        map = new HashMap<String, Object>();
+        map.put("type", Constants.DEF_LIBS_LIST_TYPE.COMMNET);
+        map.put("value", libInfo);
+        typeAdapter.addItem(map);
+
         typeAdapter.notifyDataSetChanged();
     }
 
@@ -94,13 +99,13 @@ public class DetailFragment extends BaseFragment {
     private void collect(){
         libInfo.setCollect(true);
         libInfo.save();
-        Toast.makeText(getActivity(), "已保存", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getText(R.string.toast_collect_ok), Toast.LENGTH_SHORT).show();
     }
 
     private void unCollect(){
         libInfo.setCollect(false);
         libInfo.save();
-        Toast.makeText(getActivity(), "已取消保存", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getText(R.string.toast_collect_cancel), Toast.LENGTH_SHORT).show();
     }
 
     private void onCollectBtnClick(MenuItem item){
