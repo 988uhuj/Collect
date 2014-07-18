@@ -7,11 +7,15 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.umeng.socialize.controller.RequestType;
+import com.umeng.socialize.controller.UMServiceFactory;
+import com.umeng.socialize.controller.UMSocialService;
 import com.umeng.update.UmengUpdateAgent;
 
 import java.util.ArrayList;
@@ -168,8 +172,19 @@ public class MainActivity extends BaseActivity {
 
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (drawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        if (item.getItemId() == R.id.action_talk){
+            UMSocialService controller = UMServiceFactory.getUMSocialService(getPackageName(), RequestType.SOCIAL);
+            controller.openComment(this, false);
             return true;
         }
         return false;

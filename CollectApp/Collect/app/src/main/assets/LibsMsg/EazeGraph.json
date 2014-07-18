@@ -1,0 +1,8 @@
+{
+  "name": "EazeGraph",
+  "author": "blackfizz",
+  "description": "EazeGraph is an Android library for creating beautiful and fancy charts. Its main goal was to create a lighweight library which is easy to use and highly customizeable with an \"up-to-date\"-look.",
+  "url":"https://github.com/blackfizz/EazeGraph",
+  "type":3,
+  "sample":"org.eazegraph.app.ChartActivity"
+}

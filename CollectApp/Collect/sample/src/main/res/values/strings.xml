@@ -3,7 +3,21 @@
 
     <string name="sample_name">Sample</string>
     <string name="view_animation_app_name">AndroidAnimations</string>
+    <string name="timely_app_name">TimelyTextView</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_example">Example</string>
 
+    <string name="title_benchmark">StackBlur Benchmark</string>
+    <string name="java">Java</string>
+    <string name="nativ">Native</string>
+    <string name="renderscript">Renderscript</string>
+    <string name="benchmark_start">Start Benchmark</string>
+    <string name="label_blur_amount">Blur Amount</string>
+    <string name="desc_blurred_img">Blurred Image</string>
+
+    <string-array name="blur_modes">
+        <item>@string/java</item>
+        <item>@string/nativ</item>
+        <item>@string/renderscript</item>
+    </string-array>
 </resources>

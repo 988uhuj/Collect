@@ -1,0 +1,8 @@
+{
+  "name": "android-stackblur",
+  "author": "kikoso",
+  "description": "Android StackBlur is a library that can perform a blurry effect on a Bitmap based on a gradient or radius, and return the result. The library is based on the code of Mario Klingemann.",
+  "url":"https://github.com/kikoso/android-stackblur",
+  "type":4,
+  "sample":"com.example.stackblurdemo.MainActivity"
+}

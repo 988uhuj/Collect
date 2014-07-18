@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="stackblur-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sample/build/intermediates/exploded-aar/com.enrique.stackblur/stackblur/1.0/libs/renderscript-v8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sample/build/intermediates/exploded-aar/com.enrique.stackblur/stackblur/1.0/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/sample/build/intermediates/exploded-aar/com.enrique.stackblur/stackblur/1.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="timelytextview-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sample/build/intermediates/exploded-aar/com.github.adnansm/timelytextview/1.0/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/sample/build/intermediates/exploded-aar/com.github.adnansm/timelytextview/1.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

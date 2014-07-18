@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.9.+'
+        classpath 'com.android.tools.build:gradle:0.12.+'
     }
 }
 
@@ -14,6 +14,9 @@ allprojects {
         mavenCentral()
         flatDir {
             dirs 'libs'
+        }
+        maven {
+            url 'https://oss.sonatype.org/content/groups/public'
         }
     }
 }

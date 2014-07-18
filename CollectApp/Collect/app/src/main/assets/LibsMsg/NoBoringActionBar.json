@@ -1,0 +1,8 @@
+{
+  "name": "NotBoringActionBar",
+  "author": "kikoso",
+  "description": "News Stand app makes the ActionBar not boring!",
+  "url":"https://github.com/flavienlaurent/NotBoringActionBar",
+  "type":5,
+  "sample":"com.flavienlaurent.notboringactionbar.MainActivity"
+}

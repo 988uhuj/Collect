@@ -1,4 +1,5 @@
 apply plugin: 'android-library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 19
@@ -10,6 +11,9 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    lintOptions {
+        abortOnError false
+    }
     buildTypes {
         release {
             runProguard false
@@ -17,6 +21,8 @@ android {
         }
     }
 }
+
+
 
 dependencies {
     compile 'com.android.support:appcompat-v7:19.+'
@@ -26,5 +32,7 @@ dependencies {
     compile 'com.daimajia.easing:library:1.0.0@aar'
     compile 'com.daimajia.androidanimations:library:1.0.6@aar'
 
-    compile 'timelytextview-1.0.0@aar'
+    compile 'com.github.adnansm:timelytextview:1.0@aar'
+    compile 'com.enrique.stackblur:stackblur:1.0@aar'
+
 }
