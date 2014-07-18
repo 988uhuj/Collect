@@ -52,6 +52,8 @@ dependencies {
     compile 'com.andtiner:swipeable-cards-demo:1.0@aar'
     compile 'com.andtiner:swipeable-cards:1.0@aar'
     compile 'com.flavienlaurent.notboringactionbar:notboringactionbar-demo:1.0@aar'
+    compile 'com.soundcloud.android.crop:crop-demo:1.0@aar'
+    compile 'com.soundcloud.android.crop:crop:1.0@aar'
 
 
 

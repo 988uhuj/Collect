@@ -1,0 +1,8 @@
+{
+  "name": "android-crop",
+  "author": "jdamcd",
+  "description": "Android library project for cropping images",
+  "url":"https://github.com/jdamcd/android-crop",
+  "type":6,
+  "sample":"com.soundcloud.android.crop.example.MainActivity"
+}
