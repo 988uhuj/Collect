@@ -68,8 +68,10 @@
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="okio-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="typed-preferences-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="draggablegridviewpager-demo-1.0" level="project" />
     <orderEntry type="library" exported="" name="crop-1.0" level="project" />
     <orderEntry type="library" exported="" name="eazegraph-demo-1.0" level="project" />
+    <orderEntry type="library" exported="" name="draggablegridviewpager-1.0" level="project" />
     <orderEntry type="library" exported="" name="jackson-core-asl-1.9.13" level="project" />
     <orderEntry type="library" exported="" name="crop-demo-1.0" level="project" />
     <orderEntry type="library" exported="" name="eazegraph-1.0" level="project" />

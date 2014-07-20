@@ -54,6 +54,9 @@ dependencies {
     compile 'com.flavienlaurent.notboringactionbar:notboringactionbar-demo:1.0@aar'
     compile 'com.soundcloud.android.crop:crop-demo:1.0@aar'
     compile 'com.soundcloud.android.crop:crop:1.0@aar'
+    compile 'com.coco.draggablegridviewpager:draggablegridviewpager-demo:1.0@aar'
+    compile 'com.coco.draggablegridviewpager:draggablegridviewpager:1.0@aar'
+
 
 
 

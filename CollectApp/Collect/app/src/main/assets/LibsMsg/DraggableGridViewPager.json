@@ -1,0 +1,8 @@
+{
+  "name": "Android-DraggableGridViewPager",
+  "author": "zzhouj",
+  "description": "Zaker style grid view pager, support dragging & rearrange, using as zaker's main screen.",
+  "url":"https://github.com/zzhouj/Android-DraggableGridViewPager",
+  "type":7,
+  "sample":"com.coco.draggablegridviewpager.test.DraggableGridViewPagerTestActivity"
+}
