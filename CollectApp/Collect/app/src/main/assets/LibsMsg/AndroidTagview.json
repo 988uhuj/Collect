@@ -1,0 +1,8 @@
+{
+  "name": "android-tagview",
+  "author": "mcharmas",
+  "description": "Simple android view to display list of colorful tags efficiently.",
+  "url":"https://github.com/mcharmas/android-tagview",
+  "type":1,
+  "sample":"pl.charmas.android.tagview.demo.MainActivity"
+}

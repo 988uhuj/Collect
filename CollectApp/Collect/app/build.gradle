@@ -56,8 +56,8 @@ dependencies {
     compile 'com.soundcloud.android.crop:crop:1.0@aar'
     compile 'com.coco.draggablegridviewpager:draggablegridviewpager-demo:1.0@aar'
     compile 'com.coco.draggablegridviewpager:draggablegridviewpager:1.0@aar'
-
-
+    compile 'pl.charmas.android.tagview:tagview-demo:1.0@aar'
+    compile 'pl.charmas.android.tagview:tagview:1.0@aar'
 
 
     compile project(':sample')
