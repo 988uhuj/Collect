@@ -58,6 +58,15 @@ dependencies {
     compile 'com.coco.draggablegridviewpager:draggablegridviewpager:1.0@aar'
     compile 'pl.charmas.android.tagview:tagview-demo:1.0@aar'
     compile 'pl.charmas.android.tagview:tagview:1.0@aar'
+    compile 'nl.nl2312.mimicry:mimicry-demo:1.0@aar'
+    compile 'nl.nl2312.mimicry:mimicry:1.0@aar'
+//    compile 'com.hardik.floatinglabel:floatinglabel:1.0@aar'
+//    compile 'com.hardik.floatinglabel:floatinglabel-demo:1.0@aar'
+    compile 'com.ms.square.android.expandabletextview:expandabletextview-demo:1.0@aar'
+    compile 'com.ms.square.android.expandabletextview:expandabletextview:1.0@aar'
+    compile 'com.etsy.android.grid:stagger-demo:1.0@aar'
+    compile 'com.etsy.android.grid:stagger:1.0@aar'
+
 
 
     compile project(':sample')
