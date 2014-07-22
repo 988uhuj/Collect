@@ -1,0 +1,8 @@
+{
+  "name": "FloatingLabel",
+  "author": "hardik-trivedi",
+  "description": "FloatingLabel Allows you to create a blow kind of EditText.",
+  "url":"https://github.com/hardik-trivedi/FloatingLabel",
+  "type":1,
+  "sample":"com.example.floatinglableexample.ExampleActivity"
+}

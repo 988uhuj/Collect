@@ -1,0 +1,8 @@
+{
+  "name": "AndroidStaggeredGrid",
+  "author": "etsy",
+  "description": "An Android staggered grid view which supports multiple columns with rows of varying sizes.",
+  "url":"https://github.com/etsy/AndroidStaggeredGrid",
+  "type":8,
+  "sample":"com.etsy.android.sample.MainActivity"
+}

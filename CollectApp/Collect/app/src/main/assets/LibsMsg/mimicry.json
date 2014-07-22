@@ -1,0 +1,8 @@
+{
+  "name": "mimicry",
+  "author": "erickok",
+  "description": "Mimicry is a tiny Android library -- actually just class -- to format items in a ListAdapter to display as a grid. Why not just use a GridView? Because a MimicryAdapter can be used with other ListAdapters!",
+  "url":"https://github.com/erickok/mimicry",
+  "type":8,
+  "sample":"nl.nl2312.mimicry.sample.MainActivity"
+}
