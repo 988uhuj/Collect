@@ -96,7 +96,7 @@ public class BaseActivity extends ActionBarActivity {
     protected void changeColor(int newColor) {
 
         Drawable colorDrawable = new ColorDrawable(newColor);
-        Drawable bottomDrawable = getResources().getDrawable(R.drawable.actionbar_bottom);
+        Drawable bottomDrawable = getResources().getDrawable(R.drawable.umeng_actionbar_bottom);
         LayerDrawable ld = new LayerDrawable(new Drawable[]{colorDrawable, bottomDrawable});
 
         if (oldBackground == null) {

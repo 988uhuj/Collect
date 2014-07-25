@@ -19,6 +19,7 @@
     <string name="new_one">已是最新版本</string>
     <string name="toast_collect_ok">已收藏</string>
     <string name="toast_collect_cancel">已取消收藏</string>
+    <string name="toast_init">数据初始化中</string>
 
     <string name="exit_message">是否退出</string>
     <string name="ok">确定</string>

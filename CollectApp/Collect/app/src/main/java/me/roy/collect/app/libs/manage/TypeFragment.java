@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+
+import com.etsy.android.grid.StaggeredGridView;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +23,7 @@ import me.roy.collect.util.Constants;
  */
 public class TypeFragment extends BaseFragment {
 
-    private ListView listView;
+    private StaggeredGridView listView;
     private TypeAdapter typeAdapter;
 
     private int type;
@@ -49,7 +50,7 @@ public class TypeFragment extends BaseFragment {
     }
 
     private void findViewById(){
-        listView = (ListView) getView().findViewById(R.id.list_view);
+        listView = (StaggeredGridView) getView().findViewById(R.id.grid_view);
     }
 
     private void initData(){

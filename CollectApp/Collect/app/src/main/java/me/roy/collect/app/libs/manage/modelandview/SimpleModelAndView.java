@@ -10,6 +10,7 @@ import java.util.Map;
 import me.roy.collect.R;
 import me.roy.collect.app.entity.LibType;
 import me.roy.collect.app.libs.manage.SubTypeActivity;
+import me.roy.collect.app.libs.manage.service.TypeService;
 import me.roy.collect.common.base.BaseModelAndView;
 import me.roy.collect.util.DebugLog;
 import me.roy.collect.util.LauncherHelper;
@@ -27,8 +28,13 @@ public class SimpleModelAndView extends BaseModelAndView {
     private TextView titleTextView;
     private TextView descriptionTextView;
 
+    private double height;
+
 	public SimpleModelAndView(Context context) {
 		super(context);
+        if(height == 0){
+            height = TypeService.getInstance().getRandomHeightRatio();
+        }
 		onFinishInflate();
 	}
 
@@ -54,8 +60,12 @@ public class SimpleModelAndView extends BaseModelAndView {
         DebugLog.d("map:" + map);
         libType = (LibType) map.get("value");
         titleTextView.setText(libType.getTitle());
-        descriptionTextView.setText(libType.getDescription());
-
+        descriptionTextView.setText("# " + libType.getDescription());
+//        titleTextView.setHeightRatio(height);
 	}
+
+
+
+
 
 }

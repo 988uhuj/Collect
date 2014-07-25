@@ -1,9 +1,11 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 apply plugin: 'maven'
 
 android {
     compileSdkVersion 19
     buildToolsVersion '19.1.0'
+
+    useOldManifestMerger true
 
     defaultConfig {
         minSdkVersion 9
@@ -66,6 +68,12 @@ dependencies {
     compile 'com.ms.square.android.expandabletextview:expandabletextview:1.0@aar'
     compile 'com.etsy.android.grid:stagger-demo:1.0@aar'
     compile 'com.etsy.android.grid:stagger:1.0@aar'
+    compile 'com.telly.floatingaction:floatingaction-demo:1.0@aar'
+    compile 'com.telly.floatingaction:floatingaction:1.0@aar'
+    compile 'com.xgc1986.parallaxprojectsample:parallaxprojectsample-demo:1.0@aar'
+    compile 'com.dd.circular.progress.button:button-demo:1.0@aar'
+    compile 'com.dd.circular.progress.button:button:1.0@aar'
+
 
 
 

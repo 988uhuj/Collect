@@ -25,9 +25,9 @@ public class TestNotify {
 
         NotificationCompat.BigTextStyle localBigTextStyle = new NotificationCompat.BigTextStyle(
                 new NotificationCompat.Builder(context).setAutoCancel(true)
-                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setSmallIcon(R.drawable.app_icon)
                         .setTicker("aaa")
-                        .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_launcher))
+                        .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.app_icon))
                         .setContentTitle("sdfsdf")
                         .setContentText("dsfs")
                         .setDefaults(0)

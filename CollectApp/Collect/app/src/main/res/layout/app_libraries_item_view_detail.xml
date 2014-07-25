@@ -18,9 +18,8 @@
         android:id="@+id/title"
         android:text="ddd"
         android:layout_marginBottom="12dp"
-        android:drawableLeft="@drawable/ic_action_labels"
         style="@android:style/TextAppearance.Large"
-        android:gravity="center_vertical"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView

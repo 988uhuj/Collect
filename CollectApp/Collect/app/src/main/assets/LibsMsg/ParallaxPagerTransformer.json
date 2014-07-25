@@ -1,0 +1,8 @@
+{
+  "name": "ParallaxPagerTransformer",
+  "author": "xgc1986",
+  "description": "A pager transformer for Android with parallax effect.",
+  "url":"https://github.com/xgc1986/ParallaxPagerTransformer",
+  "type":9,
+  "sample":"com.xgc1986.parallaxprojectsample.MainActivity"
+}

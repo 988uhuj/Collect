@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    android:padding="16dp"
     android:layout_marginBottom="2dp"
     android:layout_marginTop="2dp"
     android:clickable="true"
@@ -14,6 +13,9 @@
     <TextView
         android:id="@+id/title"
         android:text="ddd"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+
         style="@android:style/TextAppearance.Large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -21,7 +23,10 @@
     <TextView
         android:id="@+id/description"
         android:text="ddd"
+        android:layout_gravity="bottom"
+        android:background="@color/text_background"
         android:textColor="@color/tab_color"
+        android:padding="8dp"
         style="@android:style/TextAppearance.Small"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

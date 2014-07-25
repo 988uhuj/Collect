@@ -1,0 +1,8 @@
+{
+  "name": "circular-progress-button",
+  "author": "dmytrodanylyk",
+  "description": "Android Button which can morph to Circular Progress",
+  "url":"https://github.com/dmytrodanylyk/circular-progress-button",
+  "type":10,
+  "sample":"com.dd.sample.MainActivity"
+}

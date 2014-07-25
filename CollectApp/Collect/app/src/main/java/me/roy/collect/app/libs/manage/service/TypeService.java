@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import me.roy.collect.util.Constants;
 
@@ -12,6 +13,8 @@ import me.roy.collect.util.Constants;
  * Description : TODO
  */
 public class TypeService {
+
+    private final Random mRandom;
 
     public List<Map<String, Object>> addTest(){
 
@@ -26,9 +29,14 @@ public class TypeService {
     }
 
 
+    public double getRandomHeightRatio() {
+        return (mRandom.nextDouble() / 2.0) + 1.0; // height will be 1.0 - 1.5 the width
+    }
+
     private static volatile TypeService instance = null;
 
     private TypeService(){
+        mRandom = new Random();
     }
 
     public static TypeService getInstance() {
