@@ -1,4 +1,4 @@
-package me.roy.common.multipleview;
+package me.roy.common.multiplemodel;
 
 import android.content.Context;
 import android.view.View;

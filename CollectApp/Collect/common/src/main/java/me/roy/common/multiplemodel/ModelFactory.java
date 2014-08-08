@@ -1,4 +1,4 @@
-package me.roy.common.multipleview;
+package me.roy.common.multiplemodel;
 
 import java.util.HashMap;
 
