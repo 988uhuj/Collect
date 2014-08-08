@@ -1,4 +1,4 @@
-package me.roy.common.multiplemodel;
+package me.roy.common.base;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,10 +1,6 @@
 package me.roy.common.base;
 
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
@@ -14,71 +10,38 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 
 import me.roy.common.R;
+import me.roy.common.event.BusHelper;
 
 
 public class BaseActivity extends ActionBarActivity {
-
 	protected boolean isActive;
-	protected boolean isDataChanged;
-	private OnSyncDataListener onSyncDataListener;
-	
-	private Intent intentReceived;
-
-	protected BroadcastReceiver syncDataReceiver = new BroadcastReceiver() {
-
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			if (onSyncDataListener != null) {
-				if(isActive){
-					onSyncDataListener.onReceive(context, intent);
-				}else{
-					intentReceived = intent;
-					isDataChanged = true;
-				}
-			}
-		}
-
-	};
 
 	@Override
 	protected void onResume() {
 		isActive = true;
-		if(isDataChanged && onSyncDataListener != null){
-			onSyncDataListener.onReceive(this, intentReceived);
-			isDataChanged = false;
-		}
+        BusHelper.create().commonRegister(this);
 		super.onResume();
 	}
 
 	@Override
 	protected void onPause() {
 		isActive = false;
+        BusHelper.create().commonUnregister(this);
 		super.onPause();
 	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		IntentFilter intentFilter = new IntentFilter();
-		intentFilter.addAction(BaseConstants.CHANGE_DATA＿ACTION);
-		registerReceiver(syncDataReceiver, intentFilter);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        BusHelper.create().commonRegister(this);
 	}
 
 	@Override
 	protected void onDestroy() {
-		unregisterReceiver(syncDataReceiver);
 		super.onDestroy();
 	}
 
-	protected void setOnSyncDataListener(OnSyncDataListener i) {
-		this.onSyncDataListener = i;
-	}
-
-	protected interface OnSyncDataListener {
-		public void onReceive(Context context, Intent intent);
-	}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -90,6 +53,7 @@ public class BaseActivity extends ActionBarActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 
 

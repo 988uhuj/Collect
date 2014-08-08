@@ -1,75 +1,40 @@
 package me.roy.common.base;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+
+import me.roy.common.event.BusHelper;
 
 
 public class BaseFragment extends Fragment{
 
 	
 	protected boolean isActive;
-	protected boolean isDataChanged;
-	private OnSyncDataListener onSyncDataListener;
-	
-	private Intent intentReceived;
-
-	protected BroadcastReceiver syncDataReceiver = new BroadcastReceiver() {
-
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			if (onSyncDataListener != null) {
-				if(isActive){
-					onSyncDataListener.onReceive(context, intent);
-				}else{
-					intentReceived = intent;
-					isDataChanged = true;
-				}
-			}
-		}
-
-	};
 
 	@Override
 	public void onResume() {
 		isActive = true;
-		if(isDataChanged && onSyncDataListener != null){
-			onSyncDataListener.onReceive(getActivity(), intentReceived);
-			isDataChanged = false;
-		}
+        BusHelper.create().commonRegister(this);
 		super.onResume();
 	}
 
 	@Override
 	public void onPause() {
 		isActive = false;
+        BusHelper.create().commonUnregister(this);
 		super.onPause();
 	}
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		IntentFilter intentFilter = new IntentFilter();
-		intentFilter.addAction(BaseConstants.CHANGE_DATA＿ACTION);
-		getActivity().registerReceiver(syncDataReceiver, intentFilter);
-	}
-	
-	
 
-	@Override
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        BusHelper.create().commonRegister(this);
+    }
+
+    @Override
 	public void onDestroy() {
-		getActivity().unregisterReceiver(syncDataReceiver);
 		super.onDetach();
 	}
 
-	protected void setOnSyncDataListener(OnSyncDataListener i) {
-		this.onSyncDataListener = i;
-	}
-
-	protected interface OnSyncDataListener {
-		public void onReceive(Context context, Intent intent);
-	}
 }

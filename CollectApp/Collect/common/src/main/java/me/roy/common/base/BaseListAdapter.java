@@ -1,14 +1,14 @@
 package me.roy.common.base;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.widget.BaseAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by chenupt@gmail.com on 2014/5/18.
- * Description : TODO
+ * Description : Base list adapter with some functions
  */
 public abstract class BaseListAdapter<T> extends BaseAdapter{
 
