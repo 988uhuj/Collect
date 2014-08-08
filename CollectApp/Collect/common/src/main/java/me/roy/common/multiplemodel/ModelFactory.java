@@ -15,6 +15,7 @@ public class ModelFactory {
 
     private HashMap<String, BaseModel> viewMap;
     private HashMap<String, Integer> indexMap;
+    private HashMap<Integer, Boolean> pinnedMap;
 
     public BaseModel createModel(String modelType){
         return viewMap.get(modelType);
@@ -28,10 +29,26 @@ public class ModelFactory {
         return viewMap.size();
     }
 
-    public ModelFactory add(String modelType, BaseModel view){
-        viewMap.put(modelType, view);
-        indexMap.put(modelType, viewMap.size() - 1);
-        return this;
+    public boolean isItemViewTypePinned(int type){
+        return pinnedMap.get(type);
     }
 
+
+
+
+
+    public ModelFactory addModel(String modelType, BaseModel view, boolean isPenned){
+        return addToMap(modelType, view, isPenned);
+    }
+    public ModelFactory addModel(String modelType, BaseModel view){
+        return addToMap(modelType, view, false);
+    }
+
+    private ModelFactory addToMap(String modelType, BaseModel view, boolean isPenned){
+        viewMap.put(modelType, view);
+        int viewType = viewMap.size() - 1;
+        indexMap.put(modelType, viewType);
+        pinnedMap.put(viewType , isPenned);
+        return this;
+    }
 }

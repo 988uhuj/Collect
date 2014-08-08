@@ -15,18 +15,18 @@ import me.roy.common.base.BaseListAdapter;
  */
 public class SimpleModelAdapter extends BaseListAdapter<Map<String, Object>> {
 
-    private ModelFactory factory;
+    protected ModelFactory modelFactory;
 
     public SimpleModelAdapter(Context context, ModelFactory modelFactory) {
         super(context);
-        this.factory = modelFactory;
+        this.modelFactory = modelFactory;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         String type = (String) getItem(i).get(ModelFactory.TYPE);
         if(view == null){
-            view = factory.createModel(type);
+            view = modelFactory.createModel(type);
         }
         ((BaseModel)view).setModel(getItem(i), getList());
         ((BaseModel)view).setViewPosition(i);
@@ -37,11 +37,11 @@ public class SimpleModelAdapter extends BaseListAdapter<Map<String, Object>> {
     @Override
     public int getItemViewType(int position) {
         String type = (String) getItem(position).get(ModelFactory.TYPE);
-        return factory.getViewType(type);
+        return modelFactory.getViewType(type);
     }
 
     @Override
     public int getViewTypeCount() {
-        return factory.getViewTypeCount();
+        return modelFactory.getViewTypeCount();
     }
 }
