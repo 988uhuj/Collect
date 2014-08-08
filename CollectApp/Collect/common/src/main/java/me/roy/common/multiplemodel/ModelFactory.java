@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * Created by chenupt@gmail.com on 2014/8/7.
- * Description TODO
+ * Description : A factory create multiple item views
  */
 public class ModelFactory {
 
@@ -13,11 +13,11 @@ public class ModelFactory {
     public final static String CONTENT_LIST = "content_list";
     public final static String VIEW_POSITION = "view_position";
 
-    private HashMap<String, BaseModel> viewMap;
+    private HashMap<String, BaseItemModel> viewMap;
     private HashMap<String, Integer> indexMap;
     private HashMap<Integer, Boolean> pinnedMap;
 
-    public BaseModel createModel(String modelType){
+    public BaseItemModel createModel(String modelType){
         return viewMap.get(modelType);
     }
 
@@ -34,17 +34,14 @@ public class ModelFactory {
     }
 
 
-
-
-
-    public ModelFactory addModel(String modelType, BaseModel view, boolean isPenned){
+    public ModelFactory addModel(String modelType, BaseItemModel view, boolean isPenned){
         return addToMap(modelType, view, isPenned);
     }
-    public ModelFactory addModel(String modelType, BaseModel view){
+    public ModelFactory addModel(String modelType, BaseItemModel view){
         return addToMap(modelType, view, false);
     }
 
-    private ModelFactory addToMap(String modelType, BaseModel view, boolean isPenned){
+    private ModelFactory addToMap(String modelType, BaseItemModel view, boolean isPenned){
         viewMap.put(modelType, view);
         int viewType = viewMap.size() - 1;
         indexMap.put(modelType, viewType);

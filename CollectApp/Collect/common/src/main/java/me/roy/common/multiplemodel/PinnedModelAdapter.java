@@ -7,7 +7,7 @@ import me.roy.common.view.PinnedSectionListView;
 
 /**
  * Created by chenupt@gmail.com on 2014/8/8.
- * Description TODO
+ * Description : Sticky list item adapter
  */
 public class PinnedModelAdapter extends SimpleModelAdapter implements PinnedSectionListView.PinnedSectionListAdapter {
 

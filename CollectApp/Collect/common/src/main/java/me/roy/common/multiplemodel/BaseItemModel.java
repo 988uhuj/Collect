@@ -2,14 +2,13 @@ package me.roy.common.multiplemodel;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.FrameLayout;
 
 /**
  * Created by chenupt@gmail.com on 2014/8/8.
- * Description TODO
+ * Description : Base model view can show different item views.
  */
-public abstract class BaseModel extends FrameLayout {
+public abstract class BaseItemModel extends FrameLayout {
     public static final String TAG = "MonthViewAdapter";
 
     protected Context context;
@@ -17,11 +16,11 @@ public abstract class BaseModel extends FrameLayout {
     protected Object modelList;
     protected int position;
 
-    public BaseModel(Context context){
+    public BaseItemModel(Context context){
         this(context, null);
     }
 
-    public BaseModel(Context context, AttributeSet attrs) {
+    public BaseItemModel(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
@@ -35,7 +34,6 @@ public abstract class BaseModel extends FrameLayout {
         this.model = model;
         this.modelList = modelList;
         bindView();
-        Log.d(TAG, "setModel");
     };
 
     public void setViewPosition(int position){

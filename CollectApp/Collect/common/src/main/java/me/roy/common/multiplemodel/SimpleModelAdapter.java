@@ -11,7 +11,7 @@ import me.roy.common.base.BaseListAdapter;
 
 /**
  * Created by chenupt@gmail.com on 2014/8/8.
- * Description TODO
+ * Description : Simple base adapter for getting multiple item views
  */
 public class SimpleModelAdapter extends BaseListAdapter<Map<String, Object>> {
 
@@ -28,8 +28,8 @@ public class SimpleModelAdapter extends BaseListAdapter<Map<String, Object>> {
         if(view == null){
             view = modelFactory.createModel(type);
         }
-        ((BaseModel)view).setModel(getItem(i), getList());
-        ((BaseModel)view).setViewPosition(i);
+        ((BaseItemModel)view).setModel(getItem(i), getList());
+        ((BaseItemModel)view).setViewPosition(i);
         return view;
     }
 
