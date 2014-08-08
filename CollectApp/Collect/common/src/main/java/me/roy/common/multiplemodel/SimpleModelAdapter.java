@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import java.util.Map;
 
+import me.roy.common.base.BaseItemModel;
 import me.roy.common.base.BaseListAdapter;
 
 

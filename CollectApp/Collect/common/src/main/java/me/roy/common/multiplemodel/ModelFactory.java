@@ -2,6 +2,8 @@ package me.roy.common.multiplemodel;
 
 import java.util.HashMap;
 
+import me.roy.common.base.BaseItemModel;
+
 /**
  * Created by chenupt@gmail.com on 2014/8/7.
  * Description : A factory create multiple item views
