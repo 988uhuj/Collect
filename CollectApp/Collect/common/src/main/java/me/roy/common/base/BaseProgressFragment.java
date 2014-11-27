@@ -38,6 +38,8 @@ public class BaseProgressFragment extends ProgressFragment {
         super.onDetach();
     }
 
-	
+    public void onEvent(Integer i){
+        // TODO
+    }
 
 }

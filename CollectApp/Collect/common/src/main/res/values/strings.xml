@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Collect</string>
+    <string name="version">1.0</string>
+    <string name="description">2014/7/15</string>
+    <string name="update">软件更新</string>
+    <string name="feedback">反馈意见</string>
+    <string name="about">关于</string>
+    <string name="empty_toast">暂无数据</string>
+    <string name="new_one">已是最新版本</string>
+    <string name="exit_message">是否退出</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

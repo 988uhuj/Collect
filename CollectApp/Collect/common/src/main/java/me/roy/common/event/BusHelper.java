@@ -1,6 +1,7 @@
 package me.roy.common.event;
 
 import de.greenrobot.event.EventBus;
+import de.greenrobot.event.EventBusException;
 
 /**
  * Created by chenupt@gmail.com on 2014/8/6.
@@ -13,12 +14,18 @@ public class BusHelper {
 
     public void commonRegister(Object object){
         if(!commonBus.isRegistered(object)){
-            commonBus.register(object);
+            try {
+                commonBus.register(object);
+            } catch (EventBusException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public void commonUnregister(Object object){
-        commonBus.unregister(object);
+        if(commonBus.isRegistered(object)) {
+            commonBus.unregister(object);
+        }
     }
 
     public void syncRegister(Object object){

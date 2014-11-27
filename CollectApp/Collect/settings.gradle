@@ -1,1 +1,1 @@
-include ':app', ':sample', ':umeng'
+include ':app', ':sample', ':umeng', ':common'

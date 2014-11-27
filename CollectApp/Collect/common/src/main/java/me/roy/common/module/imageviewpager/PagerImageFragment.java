@@ -1,16 +1,23 @@
 package me.roy.common.module.imageviewpager;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.alexvasilkov.gestures.GesturesController;
 import com.alexvasilkov.gestures.State;
 import com.alexvasilkov.gestures.widgets.GestureImageView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import me.roy.common.R;
 import me.roy.common.base.BaseProgressFragment;
+import me.roy.common.event.BusHelper;
+import me.roy.common.multiplefragment.ModelFactory;
 
 /**
  * Created by chenupt@gmail.com on 2014/8/9.
@@ -21,18 +28,15 @@ public class PagerImageFragment extends BaseProgressFragment {
     private GestureImageView imageView;
     private ViewPager viewPager;
 
+
     private ImageEntity imageEntity;
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        return inflater.inflate(R.layout.common_fragment_pager_image, container, false);
-//    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setContentView(R.layout.common_fragment_pager_image);
-        setEmptyText("dd");
+        setContentShown(false);
 
         findViewById();
         initData();
@@ -42,18 +46,22 @@ public class PagerImageFragment extends BaseProgressFragment {
 
     private void findViewById(){
         imageView = (GestureImageView) getView().findViewById(R.id.image_view);
+
     }
 
     private void initData(){
+        if(getArguments() != null){
+            imageEntity = (ImageEntity) getArguments().get(ModelFactory.DATA);
+        }
 
     }
 
     private void initView(){
-        imageView.fixViewPagerScroll(viewPager);
 
+        imageView.fixViewPagerScroll(viewPager);
         imageView.getController().getSettings()
                 .setMaxZoom(15.0f)
-                .setOverscrollDistance(getActivity(), 30, 30)
+                .setOverscrollDistance(getActivity(), 30, 0)
                 .setRotationEnabled(true);
 
         imageView.setOnTouchListener(new View.OnTouchListener() {
@@ -65,15 +73,68 @@ public class PagerImageFragment extends BaseProgressFragment {
                 return false;
             }
         });
-//        imageView.getController().
-        Log.d("rotate", "delta");
+
+        imageView.getController().setOnGesturesListener(new GesturesController.OnGestureListener() {
+            @Override
+            public void onDown(MotionEvent motionEvent) {
+
+            }
+
+            @Override
+            public boolean onSingleTapUp(MotionEvent motionEvent) {
+                Log.d("rotate", "onSingleTapUp");
+                BusHelper.create().getCommonBus().post(PagerActivity.TOGGLE_ACTION_BAR);
+                return false;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent motionEvent) {
+
+            }
+
+            @Override
+            public boolean onSingleTapConfirmed(MotionEvent motionEvent) {
+                return false;
+            }
+
+            @Override
+            public boolean onDoubleTap(MotionEvent motionEvent) {
+                return false;
+            }
+        });
 
     }
 
     private void action(){
-        imageView.setImageResource(R.drawable.the_bodmer_oak);
-        setContentShown(true);
+        ImageLoader.getInstance().displayImage(imageEntity.getImageUrl(), imageView, new ImageLoadingListener() {
+            @Override
+            public void onLoadingStarted(String imageUri, View view) {
+
+            }
+
+            @Override
+            public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
+                complete();
+            }
+
+            @Override
+            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+                complete();
+            }
+
+            @Override
+            public void onLoadingCancelled(String imageUri, View view) {
+                complete();
+            }
+        });
     }
+
+    private void complete(){
+        if(getActivity() != null){
+            setContentShown(true);
+        }
+    }
+
 
     private void handleRotate(float rotation){
         float x = imageView.getWidth() / 2;

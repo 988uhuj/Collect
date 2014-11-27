@@ -39,7 +39,7 @@
         <activity android:name=".app.libs.manage.DetailActivity"
             android:label="@string/detail" />
         <activity android:name=".app.favorite.FavoriteListActivity" />
-        <activity android:name=".common.module.about.AboutActivity" />
+        <activity android:name=".me.roy.common.module.about.AboutActivity" />
     </application>
 
 </manifest>

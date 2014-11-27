@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="Collect" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module external.linked.project.path="E:\github\Collect\CollectApp\Collect\app" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="Collect" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -21,7 +21,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -56,48 +56,20 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates" />
-      <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/apk" />
+      <excludeFolder url="file://$MODULE_DIR$/build/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/build/bundles" />
+      <excludeFolder url="file://$MODULE_DIR$/build/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/build/dependency-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/build/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="sugar-1.3" level="project" />
-    <orderEntry type="library" exported="" name="swipeable-cards-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.0.0" level="project" />
-    <orderEntry type="library" exported="" name="stagger-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="draggablegridviewpager-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="tagview-1.0" level="project" />
-    <orderEntry type="library" exported="" name="eazegraph-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="button-1.0" level="project" />
-    <orderEntry type="library" exported="" name="jackson-core-asl-1.9.13" level="project" />
-    <orderEntry type="library" exported="" name="floatingaction-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="eazegraph-1.0" level="project" />
-    <orderEntry type="library" exported="" name="guice-3.0-no_aop" level="project" />
-    <orderEntry type="library" exported="" name="floatingaction-1.0" level="project" />
-    <orderEntry type="library" exported="" name="parallaxprojectsample-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-2.0.0" level="project" />
-    <orderEntry type="library" exported="" name="notboringactionbar-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="mimicry-1.0" level="project" />
-    <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
-    <orderEntry type="library" exported="" name="stagger-1.0" level="project" />
-    <orderEntry type="library" exported="" name="progressfragment-1.4.0" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-19.1.0" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
-    <orderEntry type="library" exported="" name="typed-preferences-1.1.0" level="project" />
-    <orderEntry type="library" exported="" name="crop-1.0" level="project" />
-    <orderEntry type="library" exported="" name="button-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="draggablegridviewpager-1.0" level="project" />
-    <orderEntry type="library" exported="" name="mimicry-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="crop-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="roboguice-2.0" level="project" />
-    <orderEntry type="library" exported="" name="jackson-mapper-asl-1.9.13" level="project" />
-    <orderEntry type="library" exported="" name="expandabletextview-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="javax.inject" level="project" />
-    <orderEntry type="library" exported="" name="tagview-demo-1.0" level="project" />
-    <orderEntry type="library" exported="" name="expandabletextview-1.0" level="project" />
-    <orderEntry type="library" exported="" name="swipeable-cards-1.0" level="project" />
-    <orderEntry type="module" module-name="sample" exported="" />
-    <orderEntry type="module" module-name="umeng" exported="" />
   </component>
 </module>
 

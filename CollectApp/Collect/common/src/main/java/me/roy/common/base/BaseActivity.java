@@ -33,11 +33,21 @@ public class BaseActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         BusHelper.create().commonRegister(this);
 	}
 
-	@Override
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
 	protected void onDestroy() {
 		super.onDestroy();
 	}
@@ -78,4 +88,8 @@ public class BaseActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
     }
+
+//    public void onEvent(){
+//        // TODO
+//    }
 }

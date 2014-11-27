@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonAbout">
+        <attr name="commonAppName" format="string" />
+        <attr name="commonAppIcon" format="reference" />
+        <attr name="commonAppVersion" format="string" />
+        <attr name="commonAppDescription" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonAboutStyle">
+        <attr name="commonSimple" format="reference" />
+    </declare-styleable>
+
+
+
+
+</resources>

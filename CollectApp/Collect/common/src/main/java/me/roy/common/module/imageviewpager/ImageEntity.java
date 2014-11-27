@@ -1,10 +1,12 @@
 package me.roy.common.module.imageviewpager;
 
+import java.io.Serializable;
+
 /**
  * Created by chenupt@gmail.com on 2014/8/9.
  * Description TODO
  */
-public class ImageEntity {
+public class ImageEntity implements Serializable{
     private long id;
     private String imageUrl;
     private String content;

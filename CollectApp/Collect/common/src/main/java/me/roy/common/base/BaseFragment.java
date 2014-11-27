@@ -37,4 +37,10 @@ public class BaseFragment extends Fragment{
 		super.onDetach();
 	}
 
+
+    public void onEvent(Integer integer){
+        // TODO
+    }
+
+
 }

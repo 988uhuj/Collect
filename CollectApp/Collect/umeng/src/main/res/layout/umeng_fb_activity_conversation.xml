@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
-        android:background="#000000" >
+        android:background="#343456" >
 
         <Button
             android:id="@+id/umeng_fb_back"
@@ -91,7 +91,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="#000000"
+            android:background="#343456"
             android:padding="5dp" >
 
             <Button

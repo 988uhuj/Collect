@@ -5,7 +5,7 @@
 	<color name="umeng_socialize_list_item_bgcolor">#FFFFFF</color>
 	<color name="umeng_socialize_divider">#E6E6E6</color>
 	<color name="umeng_socialize_text_time">#999999</color>
-	<color name="umeng_socialize_text_title">#464f61</color>
+	<color name="umeng_socialize_text_title">#ffffff</color>
 	<color name="umeng_socialize_text_friends_list">#959696</color>
 	<color name="umeng_socialize_text_share_content">#666666</color>
 	<color name="umeng_socialize_ucenter_bg">#EEEEEE</color>
